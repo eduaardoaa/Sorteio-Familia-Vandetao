@@ -7,10 +7,10 @@ var numerosSorteados = [];
             var numeroSorteado;
 
             do {
-                numeroSorteado = Math.floor(Math.random() * 60) + 1;
-            } while (numerosSorteados.includes(numeroSorteado) && numerosSorteados.length < 60);
+                numeroSorteado = Math.floor(Math.random() * 99) + 1;
+            } while (numerosSorteados.includes(numeroSorteado) && numerosSorteados.length < 99);
 
-            if (numerosSorteados.length >= 60) {
+            if (numerosSorteados.length >= 99) {
                 alert("Todos os números foram sorteados. Reinicie o sorteio.");
                 return;
             }
@@ -83,7 +83,7 @@ var numerosSorteados = [];
 
         function criarCartela() {
             var cartela = [];
-            for (var i = 1; i <= 60; i++) {
+            for (var i = 1; i <= 99; i++) {
                 cartela.push(i);
             }
             return cartela;
@@ -93,7 +93,7 @@ var numerosSorteados = [];
             var cartelaElement = document.getElementById("cartela");
             cartelaElement.innerHTML = "";
 
-            for (var i = 1; i <= 60; i++) {
+            for (var i = 1; i <= 99; i++) {
                 var quadrado = document.createElement("div");
                 quadrado.textContent = i;
 
